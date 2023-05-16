@@ -1,4 +1,3 @@
-import 'package:favorite_places_app/main.dart';
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 
@@ -40,7 +39,8 @@ class _LocationInputState extends State<LocationInput> {
     });
 
     locationData = await location.getLocation();
-
+    final latitude = locationData.latitude;
+    final longitude = locationData.longitude;
     setState(() {
       _isGettingLocation = false;
     });
